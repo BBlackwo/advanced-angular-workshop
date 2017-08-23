@@ -1,5 +1,10 @@
 <h1>
-  Welcome to {{title}}!
+  <a routerLink="/">{{title}}</a>
 </h1>
 
-<app-activity-list></app-activity-list>
+<div>
+  <a routerLink="/about">About</a>
+  <a routerLink="/submit">Submit</a>
+</div>
+
+<router-outlet></router-outlet>

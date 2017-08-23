@@ -1,0 +1,7 @@
+<ul *ngFor="let activity of activities | async"
+    class="activity">
+  <li>
+    <h2>{{activity.title}}</h2>
+    <p>{{activity.description}}</p>
+  </li>
+</ul>

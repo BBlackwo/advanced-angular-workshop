@@ -17,14 +17,14 @@ export class ActivityViewComponent implements OnInit {
   activity: Observable<any>;
 
   constructor(
-    private route: ActivatedRoute,
+    public route: ActivatedRoute,
     private activityService: ActivityService
   ) {
     this.activities = this.activityService.getActivityList();
 
     this.activity = this.route.params.switchMap((params) =>
       this.activities.map((list) => list.find((item) =>
-        item.title === params['title'])));
+        item.title === params.title)));
    }
 
   ngOnInit() {

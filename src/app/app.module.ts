@@ -11,7 +11,8 @@ import { ActivityViewComponent } from './activity-view/activity-view.component';
 const ROUTES = [
   {
     path: '',
-    component: ActivityListComponent
+    component: ActivityListComponent,
+    data: { title: 'Things To Do'}
   },
   {
     path: 'activities/:title',
@@ -19,11 +20,13 @@ const ROUTES = [
   },
   {
     path: 'about',
-    loadChildren: './about/about.module#AboutModule'
+    loadChildren: './about/about.module#AboutModule',
+    data: { title: 'About This App'}
   },
   {
     path: 'submit',
-    loadChildren: './submit/submit.module#SubmitModule'
+    loadChildren: './submit/submit.module#SubmitModule',
+    data: { title: 'Submit Activity'}
   }
 ];
 

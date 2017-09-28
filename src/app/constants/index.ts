@@ -1,5 +1,5 @@
 const BaseEndpoints = {
-  THINGS_TO_DO: 'https://melbourne-things-to-do.firebaseio.com',
+  THINGS_TO_DO: 'https://melbourne-things-to-do-bbackwo.firebaseio.com',
 };
 
 export const ApiEndpoints = {

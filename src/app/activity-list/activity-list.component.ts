@@ -2,7 +2,6 @@ import { StorageKeys } from './../constants/index';
 import { ActivityService } from './../services/activity.service';
 import { Observable } from 'rxjs/Observable';
 import { Component, OnInit } from '@angular/core';
-import 'rxjs/add/operator/startWith';
 
 @Component({
   selector: 'app-activity-list',
@@ -17,13 +16,7 @@ export class ActivityListComponent implements OnInit {
   }
 
   ngOnInit() {
-    const activities = this.activityService.getActivityList();
-
-    activities.subscribe((data) => {
-      localStorage[StorageKeys.ACTIVITY_CACHE] = JSON.stringify(data);
-    });
-
-    this.activities = activities.startWith(JSON.parse(localStorage[StorageKeys.ACTIVITY_CACHE] || null));
+    this.activities = this.activityService.getActivityList();
   }
 
 }

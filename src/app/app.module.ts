@@ -14,6 +14,10 @@ const ROUTES = [
     component: ActivityListComponent
   },
   {
+    path: 'activities/:title',
+    component: ActivityViewComponent
+  },
+  {
     path: 'about',
     loadChildren: './about/about.module#AboutModule'
   },
